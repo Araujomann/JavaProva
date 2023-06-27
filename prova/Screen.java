@@ -94,9 +94,6 @@ public class Screen extends JFrame implements ActionListener{
         bSair.addActionListener(this);
         miSair.addActionListener(this);
         
-        
-        
-        
         setVisible(true);
         setSize(700, 500);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -124,10 +121,10 @@ public class Screen extends JFrame implements ActionListener{
             }
             
         }
+        
         if(e.getSource() == bSalvar){
             if(tfNome.getText().length() > 0){
                 String sex = "";
-            
                 if(rbM.isSelected() == true){
                 sex = "masculino";
                 }
@@ -139,9 +136,9 @@ public class Screen extends JFrame implements ActionListener{
             }
             else {
                 JOptionPane.showMessageDialog(null, "Existem espaços em branco!");
-            }
-                
+            }   
         }
+        
         if(e.getSource() == bExcluir){
             if(tabela.getSelectedRow()== -1){
                 JOptionPane.showMessageDialog(null,"Selecione uma linha!");
@@ -157,21 +154,10 @@ public class Screen extends JFrame implements ActionListener{
             tfNum.setText(null);
             bg.clearSelection();
             cbEstado.setSelectedIndex(0);
-           
-
         }
-        
-            
-        
         
         if(e.getSource() == bSair || e.getSource() == miSair){
-         System.exit(0);
+            System.exit(0);
         }
-        
-        
-    }
-    
-        
-    
-    
+    } 
 }
